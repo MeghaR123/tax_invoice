@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tax Invoice Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="invoice-container">
+        <a href="https://www.goraitech.com/" target="_blank" style="text-decoration: none;"><h1 style="color: plum; text-align: center; text-decoration: none;">Gorai Technology Solutions</h1></a>
+        <br>
+
+    <div class="container1">
+        <div id="left">✆ +91-1234567890</div>
+        <div id="center">✉ hr@abctech.com</div>
+        <div id="right">📍14th 6th Cross, BTM 2nd stage, Bengaluru</div>
+    </div>
+
+    <br>
+    <h4>Bill To: </h4>
+    <br>
+    <h5>A2T Technologies</h5>
+    <p>17th A Cross Road, Bommanahalli, Bangalore</p>
+    <p>Contact No: <strong>8884266322</strong></p>
+    <p>GSTIN Number: <strong>29AAYCA6958N1ZC</strong></p>
+    <p>State: <strong>29 - Karnataka</strong></p>
+
+    <div class="invoice-header">
+        <div class="title-date">
+            <h2 class="title" style="color: #ff057e;">TAX INVOICE</h2>
+            <input type="date" placeholder="Date">
+            </div>
+        <div class="space"></div>
+        <input type="invoice-number" placeholder="Invoice No" name="Invoice No" class="Invoice No" id="Invoice No" style="padding-left: 2%;" onkeyup="getInput()">
+    </div>
+
+    <div class="invoice-body">
+        <table>
+            <thead>
+                <th style="padding-left:12px;">Product Name</th>
+                <th>Unit</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th style="text-align: right;">ACTION</th>
+            </thead>
+
+            <tbody id="table-body">
+                <tr class="single-row">
+                    <td><input type="text" placeholder="Product name" class="product left"></td>
+                    <td><input type="number" placeholder="0" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="price" class="price" id="price" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                    <td style="text-align: right;"><span class="material-icons">delete_outline</span></td>
+                </tr>
+
+                <tr style="padding-left: 20px">
+                    <td class="dashed "><div class="float">
+                        <a href="#" class="float" id="add-row">
+                            <span class="material-icons plus">add</span>
+                        </a>
+                    </div>
+                </td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>            
+                </tr>
+            </tbody>
+            </table>
+
+          <div id="sum"><input type="text" placeholder="0.00" name="total" class="total" id="total" disabled></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
